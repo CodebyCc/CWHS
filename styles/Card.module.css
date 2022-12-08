@@ -1,0 +1,236 @@
+/* block container */
+.blockContainer {
+  --padding-vertical: 6rem;
+  padding: var(--padding-vertical) 2rem;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+}
+
+@media screen and (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem;
+  }
+}
+
+.plan {
+  transition: 0.3s ease-out;
+}
+
+.planName {
+  color: #fff;
+  margin: 0;
+  font-weight: 500;
+  font-size: 2.4rem;
+}
+.planPrice {
+  font-size: 6rem;
+}
+.planBillingCycle {
+  font-size: 2.4rem;
+  font-weight: 300;
+  opacity: 0.8;
+  margin-right: 1rem;
+}
+
+.planDescription {
+  display: block;
+  font-size: 2rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+.plan .list__item {
+  margin-bottom: 2rem;
+}
+.planPopular {
+  transform: scale(1.1);
+  transition: 0.3s ease-out;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+.planPopular .cardHeader {
+  position: relative;
+}
+.planPopular .cardHeader::before {
+  content: url(/images/popular.svg);
+  display: inline-block;
+  width: 40px;
+  position: absolute;
+  top: -6px;
+  right: 5%;
+}
+.plan:hover {
+  transform: scale(1.05);
+}
+.planPopular:hover {
+  transform: scale(1.15);
+}
+@media screen and (min-width: 1024px) {
+  .planPopular {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .planName {
+    font-size: 1.4rem;
+  }
+  .planPrice {
+    font-size: 5rem;
+  }
+  .planBillingCycle {
+    font-size: 1.6rem;
+  }
+  .planDescription {
+    font-size: 1.7rem;
+  }
+}
+
+/* Cards */
+.card {
+  border-radius: 7px;
+  box-shadow: 0 0 20px 10px #f3f3f3;
+  overflow: hidden;
+}
+.cardHeader,
+.cardBody {
+  padding: 2rem 3rem;
+}
+.cardPrimary .cardHeader {
+  border-radius: 7px;
+  box-shadow: 0 0 20px 10px #f3f3f3;
+  overflow: hidden;
+  background-color: var(--color-primary);
+  color: #fff;
+}
+
+.cardSecondary .cardHeader {
+  background-color: var(--color-secondary);
+  color: #fff;
+  border-radius: 7px;
+  box-shadow: 0 0 20px 10px #f3f3f3;
+  overflow: hidden;
+}
+.card-primary .badge--primary {
+  background: #126de4;
+}
+
+.cardSecondary .badgeSecondary {
+  background: #02cdf1;
+}
+/* Buttons */
+.btn {
+  border-radius: 40px;
+  border: 0;
+  cursor: pointer;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin: 1rem 0;
+  outline: 0;
+  padding: 2rem 4vw;
+  text-transform: uppercase;
+  text-align: center;
+  white-space: nowrap;
+}
+.btnOutline {
+  border-radius: 40px;
+  border: 0;
+  cursor: pointer;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin: 1rem 0;
+  outline: 0;
+  padding: 2rem 4vw;
+  text-transform: uppercase;
+  text-align: center;
+  white-space: nowrap;
+  background: #fff;
+  color: var(--color-heading);
+  border: 2px solid var(--color-heading);
+  display: inline-block;
+  width: 100%;
+}
+.btnOutline:hover {
+  background: var(--color-heading);
+  color: #fff;
+}
+.btn--block {
+  display: inline-block;
+  width: 100%;
+}
+@media screen and (min-width: 1024px) {
+  .btnOutline {
+    font-size: 1.5rem;
+  }
+}
+/*List*/
+
+.list--inline .list__item {
+  display: inline-block;
+  margin-right: 2rem;
+}
+
+.listTick {
+  list-style: none;
+  padding-left: 0;
+  list-style-image: url(/images/tick.svg);
+  padding-left: 3rem;
+  color: var(--color-heading);
+}
+
+.listTick .listItem {
+  padding-left: 0.5rem;
+  margin-bottom: 1rem;
+}
+@media screen and (min-width: 1024px) {
+  .listTick.listItem {
+    padding-left: 0;
+  }
+}
+
+/* badge */
+/*Badges*/
+.badge {
+  border-radius: 50px;
+  padding: 0.5rem 2rem;
+  font-weight: 600;
+  white-space: nowrap;
+  font-size: 2rem;
+}
+
+.badgePrimary {
+  border-radius: 50px;
+  padding: 0.5rem 2rem;
+  font-weight: 600;
+  white-space: nowrap;
+  font-size: 2rem;
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.badgeSecondary {
+  border-radius: 50px;
+  padding: 0.5rem 2rem;
+  font-weight: 600;
+  white-space: nowrap;
+
+  background: var(--color-secondary);
+  color: #fff;
+  font-size: 1.6rem;
+  padding: 0.5rem 1.5rem;
+}
+.badge--small {
+  font-size: 1.6rem;
+  padding: 0.5rem 1.5rem;
+}
+@media screen and (min-width: 1024px) {
+  .badgePrimary {
+    font-size: 1.5rem;
+  }
+
+  .badge--small {
+    font-size: 1.2rem;
+  }
+}

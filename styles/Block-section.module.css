@@ -1,0 +1,107 @@
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+.block {
+  --padding-vertical: 6rem;
+  padding: var(--padding-vertical) 2rem;
+  width: 100vw;
+}
+.blockHeader {
+  text-align: center;
+}
+.Head {
+  color: #1b0760;
+}
+.feature {
+  gap: 4rem 2rem;
+  margin: 12rem;
+}
+
+.gridContainer {
+  display: grid;
+  gap: 4rem 2rem;
+}
+
+.icon--small {
+  width: 30px;
+  height: 30px;
+}
+.iconPrimary {
+  height: 40px;
+  width: 40px;
+  fill: var(--color-primary);
+}
+.icon--white {
+  fill: #fff;
+}
+.iconContainer {
+  background: #f3f9f8;
+  width: 64px;
+  height: 64px;
+  border-radius: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.featureHeading {
+  margin: 1rem 0;
+  color: #1b0760;
+}
+.featureImage {
+  width: 100%;
+  position: relative;
+  height: 60vh;
+  object-fit: cover;
+}
+.featureImageTwo {
+  width: 100%;
+  position: relative;
+  height: 60vh;
+  object-fit: cover;
+}
+.linkArrow {
+  color: var(--color-accent);
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+.featurePara {
+  font-weight: lighter;
+
+  font-size: 1.7rem;
+}
+
+.linkArrow::after {
+  content: "-->";
+  margin-left: 5px;
+  transition: margin 0.15s;
+}
+.linkArrow:hover:after {
+  margin-left: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .feature:nth-of-type(even) .feature__content {
+    order: 2;
+  }
+  .featureImage {
+    margin-left: 10rem;
+    height: 100%;
+  }
+  .featureImageTwo {
+    margin-right: 10rem;
+  }
+  .featureContentone {
+    margin-left: 10rem;
+  }
+
+  .gridContainer {
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+    gap: 4rem 2rem;
+    margin: 12rem;
+  }
+}
